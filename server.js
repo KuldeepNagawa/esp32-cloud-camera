@@ -3,6 +3,8 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
+
+app.use(express.static(__dirname));
 app.use(express.raw({ type: "image/jpeg", limit: "10mb" }));
 
 const FRAME_PATH = path.join(__dirname, "frame.jpg");
