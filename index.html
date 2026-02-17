@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP32 Live Camera</title>
+</head>
+<body>
+  <h2>Live Camera</h2>
+  <img id="cam" width="500" />
+
+  <script>
+    setInterval(() => {
+      document.getElementById("cam").src =
+        "/live?" + new Date().getTime();
+    }, 300);
+  </script>
+</body>
+</html>
